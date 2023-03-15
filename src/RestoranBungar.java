@@ -53,13 +53,13 @@ public class RestoranBungar {
         System.out.println("\n           Terima kasih atas kunjungan Anda...           ");
         System.out.println("              ...tekan ENTER untuk keluar...              ");
 
-        input.nextLine();
+        input.nextLine(); // Membersihkan buffer
     }
 
     public static String getMenu(int i) {
         switch (i) {
             case 0:
-                return "Nasi Goreng Spesial";
+                return "Nasi Goreng Spesial"; // jika index ke 0 / jika menu pertama
             case 1:
                 return "Ayam Bakar Spesial";
             case 2:
@@ -77,7 +77,7 @@ public class RestoranBungar {
         double harga = 0;
         switch (menu) {
             case 0:
-                harga = 9999.99;
+                harga = 9999.99; // jika index ke 0 atau jika menu pertama
                 break;
             case 1:
                 harga = 12345.67;
@@ -92,7 +92,7 @@ public class RestoranBungar {
                 harga = 98765.43;
                 break;
             default:
-                System.out.println("\n");
+                System.out.println("\n"); // jika tidak masuk dalam case di atas keluarkan enter
                 break;
         }
         return harga;
