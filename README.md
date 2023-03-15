@@ -13,4 +13,4 @@ Tugas Kelompok 1 Binus Online Learning
 
 ## Screenshots
 
-![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/brillianodhiya/TK1-Introduction-to-Programming/blob/main/image/Output%20Preview.png?raw=true))
+![App Screenshot](https://github.com/brillianodhiya/TK1-Introduction-to-Programming/blob/main/image/Output%20Preview.png?raw=true)
