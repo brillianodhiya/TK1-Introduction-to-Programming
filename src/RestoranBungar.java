@@ -31,9 +31,9 @@ public class RestoranBungar {
         for (int i = 0; i < 5; i++) { // Looping untuk menghitung harga pesanan untuk setiap menu
             hargaPesanan[i] = jumlahPesanan[i] * getHarga(i); // Menghitung harga pesanan
             if (i == 4) { // Jika menu terakhir
-                System.out.printf("%-40s = Rp.%20.2f\t+\n", (i + 1) + ". " + getMenu(i), hargaPesanan[i]); // Tampilkan symbol + juga di dalam modifier
+                System.out.printf("%-40s %2s porsi * Rp.%10.2f = Rp.%20.2f\t+\n", (i + 1) + ". " + getMenu(i), jumlahPesanan[i], getHarga(i),  hargaPesanan[i]); // Tampilkan symbol + juga di dalam modifier
             } else {
-                System.out.printf("%-40s = Rp.%20.2f\n", (i + 1) + ". " + getMenu(i), hargaPesanan[i]); // Tampilan modifier printf
+                System.out.printf("%-40s %2s porsi * Rp.%10.2f = Rp.%20.2f\n", (i + 1) + ". " + getMenu(i), jumlahPesanan[i], getHarga(i), hargaPesanan[i]); // Tampilan modifier printf
             }
             totalPembelian += hargaPesanan[i]; // Menghitung total pembelian
         }
@@ -41,17 +41,17 @@ public class RestoranBungar {
         double totalSetelahDiskon = totalPembelian - diskon; // Menghitung harga setelah diskon
         double pembelianPerOrang = totalSetelahDiskon / jumlahOrang; // Menghitung total pembelian per orang
 
-        System.out.println("===================================================================");
-        System.out.printf("Total Pembelian\t\t\t\t\t\t\t = Rp.%20.2f\n", totalPembelian); // menggunakan modifier untuk menampilkan harga dan text agar sejajar
-        System.out.printf("Disc. 10 %% (Masa Promosi) \t\t\t\t = Rp.%20.2f\t-\n", diskon);
-        System.out.println("++=================================================================");
+        System.out.println("============================================================================================");
+        System.out.printf("Total Pembelian   \t\t\t\t\t\t\t\t\t\t\t\t  = Rp.%20.2f\n", totalPembelian); // menggunakan modifier untuk menampilkan harga dan text agar sejajar
+        System.out.printf("Disc. 10 %% (Masa Promosi) \t\t\t\t\t\t\t\t\t\t  = Rp.%20.2f\t-\n", diskon);
+        System.out.println("++==========================================================================================");
 
-        System.out.printf("Total Pembelian setelah disc 10 %%\t\t = Rp.%20.2f\n", totalSetelahDiskon);
-        System.out.printf("Pembelian per orang (untuk %d orang) \t = Rp.%20.2f\n", jumlahOrang, pembelianPerOrang);
+        System.out.printf("Total Pembelian setelah disc 10 %%\t\t\t\t\t\t\t\t  = Rp.%20.2f\n", totalSetelahDiskon);
+        System.out.printf("Pembelian per orang (untuk %d orang) \t\t\t\t\t\t\t  = Rp.%20.2f\n", jumlahOrang, pembelianPerOrang);
 
 
-        System.out.println("\n           Terima kasih atas kunjungan Anda...           ");
-        System.out.println("              ...tekan ENTER untuk keluar...              ");
+        System.out.println("\n                             Terima kasih atas kunjungan Anda...           ");
+        System.out.println("                                 ...tekan ENTER untuk keluar...              ");
 
         input.nextLine(); // Membersihkan buffer
     }
